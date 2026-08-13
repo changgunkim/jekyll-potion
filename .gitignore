@@ -9,3 +9,5 @@ vendor
 *.ipr
 normalize
 Gemfile.lock
+.rspec_status
+*.gem

@@ -1,0 +1,13 @@
+title: Fixture Site
+markdown: kramdown
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-potion
+
+jekyll_potion:
+  site:
+    title: "Fixture Site"
+  processor: []
