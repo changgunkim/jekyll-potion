@@ -39,10 +39,11 @@ depth_order: 2
 
 `jekyll-potion` 은 아래의 버전을 기준으로 작업이 되었습니다. 이미 다른 버전을 사용한 경우라면 버전의 조정이나 호환성 검증이 필요합니다.
 
-| 라이브러리                                                 |     버전     |
-|-------------------------------------------------------|:----------:|
-| [Jekyll](https://jekyllrb.com/)                       | `>=` 4.2.2 |
-| [Nokogiri](https://github.com/sparklemotion/nokogiri) |   1.13.6   |
+| 라이브러리                                                 |        버전        |
+|-------------------------------------------------------|:-----------------:|
+| Ruby                                                   |     `>=` 3.2.0     |
+| [Jekyll](https://jekyllrb.com/)                       | `~>` 4.4, `>=` 4.4.1 |
+| [Nokogiri](https://github.com/sparklemotion/nokogiri) |       `~>` 1.19       |
 
 ## 설치
 
@@ -53,10 +54,14 @@ depth_order: 2
 {% code %}
 ```ruby
 group :jekyll_plugins do
-  gem "jekyll-potion", "1.0.1"
+  gem "jekyll-potion", "1.1.0"
 end
 ```
 {% endcode %}
+
+{% alerts style="info" %}
+`1.1.0` 은 Ruby 3.2+ 환경에서의 설치 문제(오래된 nokogiri 버전 고정으로 인한 네이티브 확장 빌드 실패)를 해결한 버전입니다. Ruby 3.2 미만을 사용 중이라면 업그레이드가 필요합니다.
+{% endalerts %}
 
 {% code %}
 ```yaml

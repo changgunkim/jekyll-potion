@@ -6,6 +6,17 @@ depth_order: 4
 
 `jekyll-potion` 의 기본적으로 설정을 추가하지 않아도 동작합니다. 하지만 설정을 통해 사이트, 부가적인 기능을 활성화 할 수 있으며 아래의 내용은 모든 설정 항목입니다.
 
+{% alerts style="warning" %}
+`jekyll_potion` 설정과 별개로, `_config.yml` 에 아래와 같이 `sass` 설정이 반드시 선언되어 있어야 합니다. 기본 제공 테마(`proto`)가 scss 자산을 포함하고 있어, 이 값이 없으면 사이트 빌드 시 오류가 발생합니다.
+
+{% code %}
+```yaml
+sass:
+  style: compressed
+```
+{% endcode %}
+{% endalerts %}
+
 {% code %}
 ```yaml
 jekyll_potion:
